@@ -1,0 +1,86 @@
+\usepackage{bm}
+% 画像
+\usepackage[dvipdfmx]{graphicx}
+% 修飾
+\usepackage{ascmac}
+\usepackage{mathrsfs}
+% 図式
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{proposition}[theorem]{命題}
+\newtheorem{lemma}[theorem]{補題}
+\newtheorem{corollary}[theorem]{系}
+\newtheorem{example}[theorem]{例}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{remark}[theorem]{注意}
+\newtheorem{guide}[theorem]{参考}
+\newtheorem{structure}[theorem]{構成}
+\newtheorem{axiom}[theorem]{公理}
+\newtheorem{exercise}{演習}
+\numberwithin{theorem}{subsection}  % 定理番号を「定理2.3.1」のように印刷
+\numberwithin{exercise}{subsection}
+\numberwithin{equation}{section} % 式番号を「(3.5.1)」のように印刷
+
+\DeclareMathOperator{\Ima}{Im}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Cok}{Cok}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Hom}{Hom}
+\newcommand{\spanning}[2]{\text{span}\{#1\:;\:#2\}}
+
+\everymath{\displaystyle} %数式をすべてDisplaystyleで表示
+
+\begin{document}
+
+\title{Basic Calculas}
+\author{hayami-m}
+\date{4/14}
+
+\maketitle
+
+\begin{itembox}[l]{4/13}
+  \begin{align*}
+    \lim_{n\to\infty}\frac{1}{n^2}\int_{1}^{2^n}t^{-1+\frac{1}{n^2}}\cos{t}dt=0
+  \end{align*}
+  であることを示せ.
+\end{itembox}
+
+\begin{itembox}[l]{4/15}
+  calculate \(\sum_{n=0}^{\infty}\frac{(-1)^n}{3n+1}\).  
+\end{itembox}
+
+\begin{itembox}[l]{4/21}
+  正方行列を一つ作り、以下の問いに答えよ。
+  \begin{enumerate}
+    \item 固有方程式を求め, 固有値とその重複度を求めよ. 固有ベクトルと固有空間の字数も答えよ.
+    \item 最小多項式を求めよ.
+    \item DeterminantとTraceを求めよ.
+    \item 対角化可能性を判定せよ.
+    \item ジョルダン標準形を求めよ.
+    \item もう一つ行列を作り, 相似かどうか判定せよ.
+  \end{enumerate}
+\end{itembox}
+
+\begin{itembox}[l]{Stirling's approximation}
+  次の式を示せ.
+  \begin{enumerate}
+    \item (Wallis' product) \(\prod_{n=0}^{\infty}\frac{(2n)^2}{(2n-1)(2n+1)}=\frac{\pi}{2}\)
+    \item (Stirling's approximation) \(\lim_{n\to\infty}\frac{n!e^n}{n^n\sqrt{2\pi{n}}}=1\)
+  \end{enumerate}
+\end{itembox}
+
+\begin{itembox}[l]{計算練習(III-4.8.2)}
+  次の積分\(I_n\)に対する漸化式を作れ.
+  \begin{enumerate}
+    \item \(I_n=\int\tan^n{x}dx\)
+    \item \(I_n=\int\sin^n{x}\cos^m{x}dx\)
+    \item \(I_n=\int(\log{x})^{n}dx\)
+    \item \(I_n=\int{x}^{m}(\log{x})^{n}dx\)
+    \item \(I_n=\int(\arcsin{x})^{n}dx\)
+  \end{enumerate}
+\end{itembox}
+
+\end{document}
